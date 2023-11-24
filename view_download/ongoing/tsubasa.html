@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../img/icon/fishnime.ico">
+        <title>fishnime</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../../css/ongoing.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-deris">
+                <a href="../../index.html"><img src="../../img/icon/icon.png" alt="Logo Situs Anime"></a>
+            </div>
+            <div class="menu-container-deris">
+                <div class="hamburger-menu-deris">
+                    <div class="bar-deris"></div>
+                    <div class="bar-deris"></div>
+                    <div class="bar-deris"></div>
+                </div>
+                <div class="menu-deris">
+                    <ul>
+                        <li><a href="../../index.html">Home</a></li>
+                        <li><a href="../../page/ongoing.html">On Going</a></li>
+                        <li><a href="../../page/list.html">Anime List</a></li>
+                        <li><a href="../../page/genre.html">Genre</a></li>
+                        <li><a href="../../page/about.html">About Me</a></li>
+                        <li><a href="../../page/contact.html">Contact us</a></li>
+                        <li>
+                            <label class="toggle-button-deris">
+                                <input type="checkbox" id="theme-toggle-deris">
+                                <span class="knob-deris"></span>
+                            </label>
+                        </li>
+                    </ul>                    
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="anime-download-deris">
+        <div class="anime-item-deris">
+            <img src="../../img/list/tsubasa.jpg" alt="">
+            <div class="text-content-deris">
+                <h2>Captain Tsubasa Season 2: Junior Youth-hen</h2>
+                <h4>Produser: <span> TV Tokyo, Nihon Ad Systems, Warner Bros. Japan, Shueisha</span></h4>
+                <h4>Tipe: <span>TV</span></h4>
+                <h4>Status: <span>On Going</span></h4>
+                <h4>Total Episode: <span>39</span></h4>
+                <h4>Durasi: <span>22 Menit</span></h4>
+                <h4>Tanggal Rilis: <span>Oct 1, 2023</span></h4>
+                <h4>Studio: <span>Studio Kai</span></h4>
+                <h4>Genre: <span>Team Sports</span></h4>
+
+        </div>
+    </section>
+
+    <!-- Tombol-tombol tautan unduh untuk setiap episode -->
+    <section id="episode-download-deris">
+        <h2 class="section-title-deris">Unduh Episode</h2>
+        <div class="download-buttons-deris">
+            <!-- Tombol-tombol tautan unduh untuk setiap episode -->
+            <div id="episode-container-deris" class="download-buttons-deris">
+            </div>
+            
+            <script>
+            // Mendapatkan elemen container
+            var episodeContainer = document.getElementById("episode-container-deris");
+            
+            // Membuat urutan episode dari 17 sampai 1
+            for (var i = 8; i >= 1; i--) {
+                var episodeDiv = document.createElement("div");
+                episodeDiv.className = "episode";
+            
+                // Menambahkan teks "Episode x" di atas tombol unduh
+                var episodeNumber = document.createElement("span");
+                episodeNumber.className = "episode-number";
+                episodeNumber.textContent = "Episode " + i ;
+            
+                episodeDiv.appendChild(episodeNumber);
+            
+                // Menggunakan link_unduh_episode_i sesuai dengan nomor episode
+                for (var quality of ["360p", "480p", "720p", "1080p"]) {
+                        var downloadLink = document.createElement("a");
+                        downloadLink.className = "download-btn";
+                        downloadLink.textContent = quality;
+                        episodeDiv.appendChild(downloadLink);
+                    }
+            
+                episodeContainer.appendChild(episodeDiv);
+            }
+            </script>
+        </div>
+    </section>
+
+    
+    
+
+    <footer>
+        <div class="footer-content-deris">
+            <div class="footer-social-deris">
+                <a href="#" target="_blank"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-square-x-twitter" style="color: #ffffff;"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+            </div>
+            <div class="footer-info-deris">
+                <p>&copy; fishnime</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+</html>

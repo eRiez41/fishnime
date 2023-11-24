@@ -1,0 +1,349 @@
+/* Tambahkan aturan CSS untuk Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+header, nav {
+    background-color: #000;
+}
+
+.menu-deris a {
+    color: #fff;
+}
+
+.menu-deris a:hover {
+    color: #d1ac31;
+}
+
+
+
+/* Aturan CSS tambahan untuk Dark Mode pada anime-item */
+body.dark-mode .anime-item-deris {
+    background-color: #333; /* Warna latar belakang untuk tema gelap */
+    color: #fff; /* Warna teks untuk tema gelap */
+}
+
+body.dark-mode .anime-item-deris:hover {
+    transform: scale(1.05);
+    background-color: #444; /* Warna latar belakang saat dihover untuk tema gelap */
+}
+
+body.dark-mode .anime-item-deris h2 {
+    color: #fff; /* Warna judul untuk tema gelap */
+}
+
+body.dark-mode .anime-item-deris:hover h2 {
+    white-space: normal;
+    overflow: visible;
+    max-width: none; /* Menghapus batasan lebar maksimum saat dihover untuk tema gelap */
+}
+
+.toggle-button-deris{
+    position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 23px;
+    bottom: 2.4px;
+}
+.toggle-button-deris input{
+    opacity: 0;
+	width: 0;
+	height: 0;
+}
+.toggle-button-deris .knob-deris{
+    position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #888888;
+	transition: .2s;
+	border-radius: 30px;
+}
+.toggle-button-deris .knob-deris:before{
+    background-color: #ffffff;
+	color: #000000;
+	position: absolute;
+	content: '';
+	height: 15px;
+	width: 14px;
+	left: 4px;
+	bottom: 4px;
+	transition: .2s;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.toggle-button-deris input:checked + .knob-deris{
+    background-color: #d1ac31;
+}
+.toggle-button-deris input:focus + .knob-deris{
+    box-shadow: 0 0 1px #2196F3;
+}
+.toggle-button-deris input:checked + .knob-deris:before{
+    color: #000000;
+	content: '';
+	background-color: #ffffff;
+	-webkit-transform: translateX(28px);
+	-ms-transform: translateX(28px);
+	transform: translateX(28px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    padding-right: 16px; /* Menambahkan padding untuk mengakomodasi scrollbar */
+    transition: 0.3s ease-in-out;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Menempatkan di atas elemen lain */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.logo-deris img {
+    height: 30px;
+}
+
+.menu-container-deris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.hamburger-menu-deris {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar-deris {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+.menu-deris {
+    display: flex;
+}
+
+.menu-deris ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-deris li {
+    margin-right: 20px;
+}
+
+.menu-deris a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-deris a.active-deris{
+    color: #d1ac31;
+}
+
+.menu-deris a:hover {
+    color: #d1ac31;
+}
+
+
+@media screen and (max-width: 670px) {
+    .hamburger-menu-deris {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        height: 30px;
+    }
+
+    .menu-deris {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        margin-top: 22px;
+    }
+
+    .menu-deris.show {
+        display: flex;
+    }
+
+    .menu-deris ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu-deris li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+#anime-list-deris {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Menengahkan item di dalam flex container */
+    align-items: center; /* Menengahkan secara vertikal */
+    padding: 1em;
+    margin-top: 100px; /* Menyesuaikan dengan tinggi header */
+}
+#anime-list-deris-completed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Menengahkan item di dalam flex container */
+    align-items: center; /* Menengahkan secara vertikal */
+    padding: 1em;
+    margin-top: 20px; /* Menyesuaikan dengan tinggi header */
+    margin-bottom: 100px;
+}
+
+.section-title-deris {
+    width: 100%; /* Mengambil lebar penuh dari container */
+    text-align: center; /* Menengahkan teks */
+    margin-bottom: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
+
+
+.anime-item-deris {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1em;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.anime-item-deris img {
+    width: 100%; /* Lebar gambar menjadi 100% dari lebar parent container */
+    height: 300px; /* Tinggi gambar tetap pada 200 piksel, sesuaikan sesuai kebutuhan */
+    object-fit: cover; /* Untuk menjaga aspek gambar agar tidak terdistorsi */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    
+}
+
+.anime-item-deris:hover {
+    transform: scale(1.05);
+}
+
+.anime-item-deris h2 {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin: 0;
+    margin-bottom: -20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; /* Menampilkan elipsis (...) untuk teks yang terpotong */
+    max-width: 190px; /* Menyesuaikan lebar maksimum yang ingin ditampilkan */
+}
+#anime-list-deris-completed .anime-item-deris h2 {
+  margin-bottom: 5%;
+}
+.anime-item-deris:hover h2 {
+    white-space: normal;
+    overflow: visible;
+    max-width: none; /* Menghapus batasan lebar maksimum saat dihover */
+}
+
+
+.anime-item-deris p {
+    padding: 1em;
+    margin: 0;
+}
+
+footer {
+    position: fixed;   /* Menetapkan posisi elemen tetap di layar */
+    bottom: 0;         /* Menetapkan jarak dari bagian bawah elemen ke bagian bawah viewport */
+    left: 0;           /* Menetapkan jarak dari sisi kiri elemen ke sisi kiri viewport */
+    width: 100%;       /* Menetapkan lebar elemen menjadi 100% dari lebar viewport */
+    z-index: 1000;     /* Menetapkan urutan tumpukan (z-index) elemen */
+    background-color: #333;  /* Menetapkan warna latar belakang elemen */
+    color: #fff;       /* Menetapkan warna teks elemen */
+    padding: 1em 0;     /* Menetapkan padding (ruang dalam elemen) atas dan bawah, tanpa padding pada sisi kiri dan kanan */
+    text-align: center; /* Menetapkan penataan teks menjadi tengah */
+}
+
+.footer-content-deris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    margin-left: 10px;
+}
+
+.footer-social a {
+    margin-right: 10px;
+}
+
+.footer-info-deris {
+    text-align: right;
+}
+
+.footer-info-deris p {
+    margin: 0;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.footer-info-deris a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.footer-info-deris a:hover {
+    color: #4CAF50;
+}

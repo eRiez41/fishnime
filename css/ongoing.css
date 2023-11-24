@@ -1,0 +1,348 @@
+/* Tambahkan aturan CSS untuk Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+header, nav {
+    background-color: #000;
+}
+
+.menu-deris a {
+    color: #fff;
+}
+
+.menu-deris a:hover {
+    color: #d1ac31;
+}
+
+
+
+/* Aturan CSS tambahan untuk Dark Mode pada anime-item */
+body.dark-mode .anime-item-deris {
+    background-color: #333; /* Warna latar belakang untuk tema gelap */
+    color: #fff; /* Warna teks untuk tema gelap */
+}
+
+
+body.dark-mode .anime-item-deris h2 {
+    color: #fff; /* Warna judul untuk tema gelap */
+}
+
+body.dark-mode .episode-number{
+    color: #fff;
+}
+
+header, nav {
+    background-color: #000;
+}
+
+.menu-deris a {
+    color: #fff;
+}
+
+.menu-deris a:hover {
+    color: #d1ac31;
+}
+
+.toggle-button-deris{
+    position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 23px;
+    bottom: 2.4px;
+}
+.toggle-button-deris input{
+    opacity: 0;
+	width: 0;
+	height: 0;
+}
+.toggle-button-deris .knob-deris{
+    position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #888888;
+	transition: .2s;
+	border-radius: 30px;
+}
+.toggle-button-deris .knob-deris:before{
+    background-color: #ffffff;
+	color: #000000;
+	position: absolute;
+	content: '';
+	height: 15px;
+	width: 14px;
+	left: 4px;
+	bottom: 4px;
+	transition: .2s;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.toggle-button-deris input:checked + .knob-deris{
+    background-color: #d1ac31;
+}
+.toggle-button-deris input:focus + .knob-deris{
+    box-shadow: 0 0 1px #2196F3;
+}
+.toggle-button-deris input:checked + .knob-deris:before{
+    color: #000000;
+	content: '';
+	background-color: #ffffff;
+	-webkit-transform: translateX(28px);
+	-ms-transform: translateX(28px);
+	transform: translateX(28px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    padding-right: 16px; /* Menambahkan padding untuk mengakomodasi scrollbar */
+    transition: 0.3s ease-in-out;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Menempatkan di atas elemen lain */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+.logo-deris img {
+    height: 30px;
+}
+
+.menu-container-deris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.hamburger-menu-deris {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar-deris {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+.menu-deris {
+    display: flex;
+}
+
+.menu-deris ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu-deris li {
+    margin-right: 20px;
+}
+
+.menu-deris a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu-deris a:hover {
+    color: #d1ac31;
+}
+
+
+@media screen and (max-width: 670px) {
+    .hamburger-menu-deris {
+        display: flex;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px;
+        height: 30px;
+    }
+
+    .menu-deris {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        margin-top: 22px;
+    }
+
+    .menu-deris ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu-deris li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.section-title-deris {
+    width: 100%; /* Mengambil lebar penuh dari container */
+    text-align: center; /* Menengahkan teks */
+    margin-bottom: 20px; /* Sesuaikan margin sesuai kebutuhan */
+}
+#anime-download-deris {
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak ke kolom */
+    align-items: flex-start; /* Mengatur elemen sejajar ke kiri */
+    padding: 1em;
+    margin-top: 100px; /* Menyesuaikan dengan tinggi header */
+}
+
+#episode-download-deris {
+    padding-bottom: 60px; /* Sesuaikan tinggi padding dengan tinggi footer Anda */
+}
+
+.episode .download-btn {
+    margin-right: 8px; /* Atur margin kanan untuk memberikan ruang antar tombol */
+  }
+
+.episode-number {
+    display: block; /* Membuatnya menempati baris baru */
+    margin-bottom: 5px; /* Sesuaikan dengan preferensi Anda */
+    font-weight: bold; /* Atur berat teks sesuai keinginan Anda */
+    color: #333; /* Sesuaikan warna teks sesuai keinginan Anda */
+}
+
+.anime-item-deris {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px; /* Memberikan margin kiri */
+    width: 100%; /* Lebar elemen 100% untuk mengisi konten */
+    display: flex;
+}
+
+.anime-item-deris img {
+    width: 300px; /* Atur lebar gambar sesuai kebutuhan */
+    height: auto; /* Menyesuaikan ketinggian gambar secara proporsional */
+    border-radius: 10px 0 0 10px; /* Menerapkan sudut melengkung pada elemen gambar */
+}
+
+.text-content-deris {
+    padding: 1em; /* Atur ruang di sekitar elemen */
+}
+
+h2, h4 {
+    margin: 0; /* Hapus margin bawaan */
+    margin-bottom: 10px; /* Tambahkan margin bawah sesuai kebutuhan */
+}
+
+.download-buttons-deris {
+    text-align: center; /* Untuk menyusun tombol-tombol ke tengah */
+}
+.download-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 1%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    position: fixed;   /* Menetapkan posisi elemen tetap di layar */
+    bottom: 0;         /* Menetapkan jarak dari bagian bawah elemen ke bagian bawah viewport */
+    left: 0;           /* Menetapkan jarak dari sisi kiri elemen ke sisi kiri viewport */
+    width: 100%;       /* Menetapkan lebar elemen menjadi 100% dari lebar viewport */
+    z-index: 1000;     /* Menetapkan urutan tumpukan (z-index) elemen */
+    background-color: #333;  /* Menetapkan warna latar belakang elemen */
+    color: #fff;       /* Menetapkan warna teks elemen */
+    padding: 1em 0;     /* Menetapkan padding (ruang dalam elemen) atas dan bawah, tanpa padding pada sisi kiri dan kanan */
+    text-align: center; /* Menetapkan penataan teks menjadi tengah */
+}
+
+.footer-content-deris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social-deris {
+    display: flex;
+    margin-left: 10px;
+}
+
+.footer-social-deris a {
+    margin-right: 10px;
+}
+
+.footer-info-deris {
+    text-align: right;
+}
+
+.footer-info-deris p {
+    margin: 0;
+    font-size: 16px;
+    padding-right: 10px;
+}
+
+.footer-info-deris a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.footer-info-deris a:hover {
+    color: #4CAF50;
+}
